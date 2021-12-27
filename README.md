@@ -2,7 +2,7 @@
 
 > React AdminLTE components
 
-[![NPM](https://img.shields.io/npm/v/react-adminlte-3.svg)](https://www.npmjs.com/package/react-adminlte-3) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+[![NPM](https://img.shields.io/npm/v/react-adminlte-3.svg)](https://www.npmjs.com/package/react-adminlte-3) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)[![Build status](https://github.com/mopeyjellyfish/react-adminlte-3/actions/workflows/build.yml/badge.svg)](https://github.com/mopeyjellyfish/react-adminlte-3/actions?query=workflow%3Abuild)
 
 ## Install
 
