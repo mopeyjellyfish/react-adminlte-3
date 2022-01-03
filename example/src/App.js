@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import {
   Wrapper,
@@ -19,10 +19,26 @@ import { DemoTimeline } from './Timeline'
 import { DemoLogin } from './Login'
 
 const App = () => {
+  const [dark, setDark] = useState(false);
+  const [fixedFooter, setFixedFooter] = useState(false);
+  const [fixedSidebar, setFixedSidebar] = useState(false);
+  const [fixedNavbar, setFixedNavbar] = useState(false);
+  const [collapsedSidebar, setCollapsedSidebar] = useState(false);
+  const [boxed, setBoxed] = useState(false);
+
+  const setSettings = (dark, fixedFooter, fixedSidebar, fixedNavbar, collapsedSidebar, boxed) => {
+    setDark(dark)
+    setFixedFooter(fixedFooter)
+    setFixedSidebar(fixedSidebar)
+    setFixedNavbar(fixedNavbar)
+    setCollapsedSidebar(collapsedSidebar)
+    setBoxed(boxed)
+  }
+
   return (
     <div>
-      <Wrapper>
-        <DemoHeader />
+      <Wrapper dark={dark} fixedFooter={fixedFooter} fixedSidebar={fixedSidebar} fixedNavbar={fixedNavbar} collapsedSidebar={collapsedSidebar} boxed={boxed}>
+        <DemoHeader dark={dark}/>
         <DemoSidebar />
         <PageWrapper>
           <PageHeader title='Demo Page'>
@@ -41,7 +57,7 @@ const App = () => {
             <DemoLogin />
           </PageContent>
         </PageWrapper>
-        <DemoAside />
+        <DemoAside setSettings={setSettings} dark={dark} fixedFooter={fixedFooter} fixedSidebar={fixedSidebar} fixedNavbar={fixedNavbar} collapsedSidebar={collapsedSidebar} boxed={boxed}/>
         <DemoFooter />
       </Wrapper>
     </div>

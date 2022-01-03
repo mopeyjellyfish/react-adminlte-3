@@ -1,9 +1,10 @@
 import React from 'react';
 import { NavHeader, Nav, NavToggle, NavLink, AsideToggle } from 'react-adminlte-3'
 
-export function DemoHeader() {
+export function DemoHeader(props) {
+  const {dark} = props
   return (
-    <NavHeader>
+    <NavHeader dark={dark}>
         <Nav>
             <NavToggle/>
             <NavLink href="#home">
