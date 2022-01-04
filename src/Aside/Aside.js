@@ -10,7 +10,7 @@ export class Aside extends PureComponent {
           dark ? 'control-sidebar-dark' : 'control-sidebar-light'
         }`}
       >
-        <div className='p-3'>{children}</div>
+        <div className='p-3 control-sidebar-content'>{children}</div>
       </aside>
     )
   }

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, {useState} from 'react';
 import { Aside } from 'react-adminlte-3'
 
 export function DemoAside(props) {
   const {setSettings, dark, fixedFooter, fixedSidebar, fixedNavbar, collapsedSidebar, boxed} = props
+  const [asideDark, setAsideDark] = useState(true)
   return (
-    <Aside>
+    <Aside dark={asideDark}>
         <h5>Layout Options</h5>
         <div className="mb-1">
             <input type="checkbox" checked={dark} onChange={ () => setSettings(!dark, fixedFooter, fixedSidebar, fixedNavbar, collapsedSidebar, boxed)} className="mr-1" />
@@ -29,6 +30,10 @@ export function DemoAside(props) {
         <div className="mb-1">
             <input type="checkbox" checked={boxed} onChange={ () => setSettings(dark, fixedFooter, fixedSidebar, fixedNavbar, collapsedSidebar, !boxed)} className="mr-1" />
             <span>Boxed</span>
+        </div>
+        <div className="mb-1">
+            <input type="checkbox" checked={asideDark} onChange={ () => setAsideDark(!asideDark)} className="mr-1" />
+            <span>Use Dark Aside</span>
         </div>
     </Aside>
   );

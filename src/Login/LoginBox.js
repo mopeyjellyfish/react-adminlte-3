@@ -1,16 +1,16 @@
 import React, { PureComponent } from 'react'
 import PropTypes from 'prop-types'
 
-export class LoginWrapper extends PureComponent {
+export class LoginBox extends PureComponent {
   render() {
     const { children } = this.props
     return <div className='login-box'>{children}</div>
   }
 }
-LoginWrapper.propTypes = {
+LoginBox.propTypes = {
   children: PropTypes.node
 }
-LoginWrapper.defaultProps = {
+LoginBox.defaultProps = {
   children: null
 }
-export default { LoginWrapper }
+export default { LoginBox }

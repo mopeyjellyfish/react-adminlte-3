@@ -4,12 +4,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft, faAngleDown } from '@fortawesome/free-solid-svg-icons'
 
 export function SidebarNavItem(props) {
-  const { children, icon, text, active, href } = props
+  const { children, icon, text, active } = props
   const [isOpen, setOpen] = useState(false)
   return (
     <li className='nav-item'>
-      <a
-        href={href}
+      <span
         className={`nav-link ${active ? 'active' : ''}`}
         onClick={() => setOpen(!isOpen)}
       >
@@ -23,7 +22,7 @@ export function SidebarNavItem(props) {
             />
           ) : null}
         </p>
-      </a>
+      </span>
       {children}
     </li>
   )
@@ -33,14 +32,12 @@ SidebarNavItem.propTypes = {
   children: PropTypes.element,
   icon: PropTypes.object,
   text: PropTypes.string,
-  href: PropTypes.string,
   active: PropTypes.bool
 }
 SidebarNavItem.defaultProps = {
   children: null,
   icon: null,
   text: '',
-  active: false,
-  href: '/#'
+  active: false
 }
 export default { SidebarNavItem }
