@@ -7,15 +7,14 @@ export class AsideToggle extends PureComponent {
   render() {
     return (
       <NavItem>
-        <a
+        <span
           className='nav-link'
           data-widget='control-sidebar'
           data-slide='true'
-          href='#'
           role='button'
         >
           <FontAwesomeIcon icon={faThLarge} />
-        </a>
+        </span>
       </NavItem>
     )
   }

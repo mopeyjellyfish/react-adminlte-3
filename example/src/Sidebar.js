@@ -19,14 +19,18 @@ import { Link } from 'react-router-dom'
 export function DemoSidebar() {
   return (
     <SidebarWrapper>
-      <MainLogo
-        href='#'
-        alt='Main Demo Logo'
-        text='Demo Page'
-        image='logo.png'
-      />
+      <Link to='/'>
+        <MainLogo
+            href='#'
+            alt='Main Demo Logo'
+            text='Demo Page'
+            image='logo.png'
+        />
+      </Link>
       <Sidebar>
-        <UserPanel image='user.jpg' text='Demo User' href='#' />
+        <Link to='/'>
+            <UserPanel image='user.jpg' text='Demo User'/>
+        </Link>
         <SidebarNav>
           <SidebarNavItem text='Dashboard' icon={faTachometerAlt} />
           <SidebarNavItem text='Nested' icon={faCircle}>
