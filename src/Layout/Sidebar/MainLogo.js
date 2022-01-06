@@ -3,9 +3,9 @@ import PropTypes from 'prop-types'
 
 export class MainLogo extends PureComponent {
   render() {
-    const { children, href, alt, image, text } = this.props
+    const { children, alt, image, text } = this.props
     return (
-      <a href={href} className='brand-link'>
+      <span className='brand-link'>
         <img
           src={image}
           alt={alt}
@@ -13,20 +13,18 @@ export class MainLogo extends PureComponent {
         />
         <span className='brand-text font-weight-light'>{text}</span>
         {children}
-      </a>
+      </span>
     )
   }
 }
 MainLogo.propTypes = {
   children: PropTypes.node,
-  href: PropTypes.string,
   image: PropTypes.string,
   alt: PropTypes.string,
   text: PropTypes.string
 }
 MainLogo.defaultProps = {
   children: null,
-  href: '',
   image: '',
   text: '',
   alt: ''

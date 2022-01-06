@@ -4,24 +4,20 @@ import { NavItem } from './NavItem'
 
 export class NavLink extends PureComponent {
   render() {
-    const { children, href } = this.props
+    const { children } = this.props
     return (
       <NavItem>
-        <a href={href} className='nav-link'>
-          {children}
-        </a>
+        <span className='nav-link'>{children}</span>
       </NavItem>
     )
   }
 }
 NavLink.propTypes = {
-  children: PropTypes.node,
-  href: PropTypes.string
+  children: PropTypes.node
 }
 
 NavLink.defaultProps = {
-  children: null,
-  href: ''
+  children: null
 }
 
 export default { NavLink }
