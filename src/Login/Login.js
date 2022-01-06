@@ -5,7 +5,7 @@ import { CardWrapper, CardHeader, CardBody } from '../Card'
 import { LoginBox } from './LoginBox'
 
 export function Login(props) {
-  const { children, header, message, boxOnly } = props
+  const { children, header, message, boxOnly, type } = props
   useEffect(() => {
     if (!boxOnly) {
       document.body.classList.add('login-page')
@@ -17,7 +17,7 @@ export function Login(props) {
   })
   return (
     <LoginBox>
-      <CardWrapper outline type='primary'>
+      <CardWrapper outline type={type}>
         <CardHeader center>{header}</CardHeader>
         <CardBody>
           <p className='login-box-msg'>{message}</p>
@@ -32,13 +32,15 @@ Login.propTypes = {
   header: PropTypes.node,
   title: PropTypes.string,
   message: PropTypes.string,
-  boxOnly: PropTypes.bool
+  boxOnly: PropTypes.bool,
+  type: PropTypes.string
 }
 Login.defaultProps = {
   children: null,
   title: '',
   message: '',
   boxOnly: false,
-  header: null
+  header: null,
+  type: 'secondary'
 }
 export default { Login }

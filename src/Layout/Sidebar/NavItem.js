@@ -22,7 +22,7 @@ export function SidebarNavItem(props) {
             />
           ) : null}
         </p>
-      </span>
+      </span>{' '}
       {children}
     </li>
   )
